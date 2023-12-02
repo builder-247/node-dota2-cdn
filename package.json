@@ -1,0 +1,22 @@
+{
+  "name": "dota2-cdn",
+  "version": "0.0.0",
+  "description": "Retrieves the Steam CDN Image URLs for Dota 2 Items ",
+  "main": "getHash.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/builder-247/node-dota2-cdn.git"
+  },
+  "author": "builder-247",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/builder-247/node-dota2-cdn/issues"
+  },
+  "homepage": "https://github.com/builder-247/node-dota2-cdn#readme",
+  "dependencies": {
+    "vpk": "^0.2.0"
+  }
+}
