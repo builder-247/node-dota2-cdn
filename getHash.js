@@ -8,11 +8,11 @@ const dir = '/SteamLibrary/steamapps/common/dota 2 beta/game/dota'
 const vpkDir = new vpk(dir + '/pak01_dir.vpk');
 vpkDir.load();
 
-const vpkIconFiles = vpkDir.files.filter((f) => f.startsWith('panorama/images/econ/items'));
+const vpkIconFiles = vpkDir.files.filter((f) => f.startsWith('panorama/images/econ'));
 
 // Append this to `https://steamcdn-a.akamaihd.net/apps/570/`
 function itemCDNURL(vpkPath, hash) {
-  const path = vpkPath.replace('panorama/images/', '').replace('_png.vtex_c', '')
+  const path = vpkPath.replace('panorama/images/', '').replace(/_[\w]{3}\.vtex_c/, '')
   return `icons/${path}.${hash}.png`;
 }
 
@@ -36,7 +36,7 @@ let items = {};
 
 vpkIconFiles.forEach((path) => {
   const split = path.split('/');
-  const name = split[split.length - 2];
+  const name = split[split.length - 1].replace(/_[\w]{3}\.vtex_c/, '');
   const hash = getHash(path);
   items[name] = itemCDNURL(path, hash);
 })
