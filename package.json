@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "description": "Retrieves the Steam CDN Image URLs for Dota 2 Items ",
   "main": "getHash.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
